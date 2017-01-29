@@ -1,0 +1,6 @@
+rm -f main.o vtable
+g++ -O0 -Wall -m64 -pthread  -D_REENTRANT -I/home/minex/boost_1_63_0/ -g -fdump-class-hierarchy=vtable.report -c main.cpp
+g++ -O0 -Wall -m64 -pthread  -D_REENTRANT -I/home/minex/boost_1_63_0/ -g -fdump-class-hierarchy=vtable.report -masm=intel -o vtable main.o \
+-Wl,--rpath=/home/minex/glibc/lib64 \
+-Wl,--dynamic-linker=/home/minex/glibc/lib64/ld-linux-x86-64.so.2 \
+
