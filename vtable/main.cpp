@@ -1,3 +1,4 @@
+
 /*First, what is the contract for instances of virtual classes? E.g. if you have a variable IFace1* obj:
 
 There is a pointer to virtual table at obj+0.
